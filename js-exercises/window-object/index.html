@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window object</title>
+</head>
+<body>
+    <button onclick="showAlert()">Click me</button>
+    <button onclick="greetUser()">Enter your name</button>
+    <script>
+        function showAlert() {
+            alert("Hello, World!");
+        }
+
+        function greetUser() {
+            let name = prompt("Please enter your name:");
+            alert("Hello, " + name + "!");
+        }
+    </script>
+    
+</body>
+</html>

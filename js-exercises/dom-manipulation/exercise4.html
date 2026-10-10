@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <h2>Login</h2>
+
+    <label>Username:</label>
+    <input type="text" id="username">
+    <br>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <br>
+
+    <button onclick="checkLogin()">Login</button>
+    <p id="Message"></p>
+
+    <script>
+        function checkLogin() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "1234") {
+                document.getElementById("Message").textContent = "Login successful!";
+            } else {
+                document.getElementById("Message").textContent = "Invalid username or password.";
+            }
+        }
+    </script>
+</body>
+</html>
