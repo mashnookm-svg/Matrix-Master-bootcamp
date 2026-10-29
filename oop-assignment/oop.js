@@ -11,6 +11,7 @@ class person {
     return `Hello, my name is ${this.name} and I'm ${this.age} years old.`;
   }
 }
+
 // exercise 2-this
 // working with `this` and callback
 const person1 = new person("john", 25);
