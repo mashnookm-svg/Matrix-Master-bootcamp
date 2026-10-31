@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Example with XMLHttpRequest</title>
+</head>
+<body>
+    <button id="load-data">Load Data</button>
+    <div id="data-container"></div>
+
+    <script>
+        // Attach an event listener to the button
+        document.getElementById("load-data").addEventListener("click", loadData);
+
+        function loadData() {
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // Configure the request
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos', true);
+
+            // Set up an event handler to handle the response
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    document.getElementById("data-container").innerHTML = `
+                        <h2>${data.title}</h2>
+                        <p>${data.body}</p>
+                    `;
+                }
+            };
+
+            // Send the requestS
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
